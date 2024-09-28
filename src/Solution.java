@@ -25,5 +25,18 @@ public class Solution {
 	        return res.toString();
 		
 	}
+
+	public String stringCommonDivisor(String str1, String str2) {
+		
+		String divisor ="";
+		
+		for(int i = str2.length(); i>0; i--) {
+			 divisor = str2.substring(0, i);
+			 if( str1.split(divisor).length<=0 && str2.split(divisor).length<=0) {
+				 return divisor;
+			 }
+		}
+		return "";
+	}
 }
 	
